@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Will You Marry Me?</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f9e3e3;
+      font-family: 'Arial', sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .container {
+      text-align: center;
+      z-index: 2;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #e74c3c;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    #yesButton {
+      background-color: #2ecc71;
+      color: white;
+    }
+
+    #noButton {
+      background-color: #e74c3c;
+      color: white;
+    }
+
+    #noButton:hover {
+      position: absolute;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: #e74c3c;
+      display: none;
+    }
+
+    #loveImage {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      height: auto;
+      z-index: 3;
+    }
+
+    .balloon {
+      position: absolute;
+      font-size: 2rem;
+      color: #e74c3c;
+      animation: float 6s infinite ease-in-out;
+      z-index: 1;
+    }
+
+    .heart-shower {
+      position: absolute;
+      top: -50px;
+      font-size: 2rem;
+      color: #e74c3c;
+      animation: fall linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) translateX(0);
+      }
+      25% {
+        transform: translateY(-20px) translateX(20px);
+      }
+      50% {
+        transform: translateY(20px) translateX(-20px);
+      }
+      75% {
+        transform: translateY(-20px) translateX(-20px);
+      }
+    }
+
+    @keyframes fall {
+      to {
+        transform: translateY(100vh);
+      }
+    }
+
+    /* Mobile-specific adjustments */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      button {
+        font-size: 1rem;
+        padding: 8px 16px;
+      }
+
+      #message {
+        font-size: 1.2rem;
+      }
+
+      .balloon, .heart-shower {
+        font-size: 1.5rem;
+      }
+
+      #loveImage {
+        width: 100px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy Birthday Shutapiiiiiii !!! Will You Marry Me?</h1>
+    <div class="buttons">
+      <button id="yesButton">Yes</button>
+      <button id="noButton">No</button>
+    </div>
+    <div id="message">My Dearest Zahwa,
+        From the moment our paths crossed, something shifted within me. I cannot fully describe it, but I know I felt an undeniable pull toward you. Your presence in my life has filled it with warmth, meaning, and a depth of love I had never known before. Every moment we share feels like a gift, and each day I spend with you only deepens my admiration and affection for you. ❤️
+        Myyyyyyy shundariiii.., your name itself brings to minddd the most beautiful, ethereal images, like the gentle sway of a blossoming flower in the spring breeze 🌸. It carries the promse of something precious, something rare. And every time I hear it from your lips, it reminds me of how lucky I am to have you by my side. In a world full of fleeting moments, you are the one thing that feels constant, steady, and true. 💫
+        When I think of you, my heart races, not just with passion, but with profound gratitude 🙏. Your laughter is the music that brightens my darkest days, and your presence brings a sense of peace I never knew I needed. You are my safe place, my reason to smile every single dayyyyy💕
+        Every time I look into your eyes, I see a future filled with endless possibilities. You are my inspiration, my muse. You make me want to be the best version of myself, simply because you deserve nothing less than the best. And I vow to spend every moment of my life showing you how deeply I love youuuuuuuu.... 💖
+        Zahwaaaaa, I am beyond grateful for the love you’ve brought into my life. You are the most beautiful person I know, both inside and out, and I am honored to walk this journey with you by my side. With you, I’ve found not just love, but home. 🏡
+        Yours forever,
+        Anuuuuuuuuu 💕
+        I hope this resonates with the feeling you're looking to express!
+        This dayyyy 27/02/2006
+        The dayyyy my beautiful princess was born to hold myyy handdd forever and live a life of love and prosperityyyy🥹🥹🤌.
+        Todayyy she is 19 years younggggg.. and she is one step closerrr tooo be myy gorgeous brideee and i will marey her an have cute kids with herr.....🥰🥰😍
+        May thiss picture make u smileeeeee...
+        Keeep smilinggg dearrr🥹😁
+        U loook  veryyy beautifull when uu smileee..🥰</div>
+  </div>
+
+  <!-- Balloons -->
+  <div class="balloon" style="top: 10%; left: 5%;">❤️</div>
+  <div class="balloon" style="top: 20%; left: 80%;">❤️</div>
+  <div class="balloon" style="top: 50%; left: 30%;">❤️</div>
+  <div class="balloon" style="top: 70%; left: 60%;">❤️</div>
+  <div class="balloon" style="top: 90%; left: 10%;">❤️</div>
+
+  <!-- Love Image -->
+  <img id="loveImage" src="Screenshot 2025-02-26 at 10.40.52 PM.png" alt="Love Image">
+
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas" style="position: fixed; top: 0; left: 0; pointer-events: none; z-index: 999;"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script>
+    const yesButton = document.getElementById('yesButton');
+    const noButton = document.getElementById('noButton');
+    const message = document.getElementById('message');
+    const loveImage = document.getElementById('loveImage');
+
+    // Move "No" button on hover or touch
+    noButton.addEventListener('mouseover', () => moveButton(noButton));
+    noButton.addEventListener('touchstart', () => moveButton(noButton));
+
+    function moveButton(button) {
+      const x = Math.random() * (window.innerWidth - button.offsetWidth);
+      const y = Math.random() * (window.innerHeight - button.offsetHeight);
+      button.style.position = 'absolute';
+      button.style.left = `${x}px`;
+      button.style.top = `${y}px`;
+    }
+
+    // Handle "Yes" button click
+    yesButton.addEventListener('click', () => {
+      // Show message
+      message.style.display = 'block';
+      yesButton.style.display = 'none';
+      noButton.style.display = 'none';
+
+      // Show love image
+      loveImage.style.display = 'block';
+
+      // Trigger confetti
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+      });
+
+      // Start heart shower
+      startHeartShower();
+    });
+
+    // Heart shower function
+    function startHeartShower() {
+      const heartContainer = document.createElement('div');
+      heartContainer.style.position = 'fixed';
+      heartContainer.style.top = '0';
+      heartContainer.style.left = '0';
+      heartContainer.style.width = '100%';
+      heartContainer.style.height = '100%';
+      heartContainer.style.pointerEvents = 'none';
+      document.body.appendChild(heartContainer);
+
+      setInterval(() => {
+        const heart = document.createElement('div');
+        heart.innerHTML = '❤️';
+        heart.className = 'heart-shower';
+        heart.style.left = `${Math.random() * 100}%`;
+        heart.style.animationDuration = `${Math.random() * 3 + 2}s`; // Random fall speed
+        heartContainer.appendChild(heart);
+
+        // Remove hearts after they fall
+        setTimeout(() => heart.remove(), 5000);
+      }, 300); // Add a new heart every 300ms
+    }
+  </script>
+</body>
+</html>
